@@ -28,7 +28,7 @@ export const Portfolio = () => {
                       console.log(technologie.toLowerCase());
                       return <li key={technologie}>
                         <div style={{ width: "40px", height: "40px", overflow: "hidden" }}>
-                          <img src={`/icons/${technologie.toLowerCase()}.png`} alt={technologie} style={{ width: "100%", height: "100%", objectFit: "contain" }} />
+                          <img src={`/icons/${technologie.toLowerCase()}.png`} alt={technologie} title={technologie} style={{ width: "100%", height: "100%", objectFit: "contain" }} />
                         </div>
                       </li>
                     })
