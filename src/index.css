@@ -238,21 +238,30 @@ img {
 #container-project .mask {
   width: var(--container-project-mask-width);
   height: 587px;
-  margin-bottom:70px;
+  margin-bottom: 70px;
   overflow: hidden;
 }
 
-.text-box{
+.text-box {
   width: var(--container-project-mask-width);
   box-sizing: border-box;
-  padding:15px;
+  padding: 15px;
   border: 1px solid #696969;
   border-radius: 5px;
   margin: 0 0 70px 0;
   text-align: left;
   background-color: var(--secondary);
-  color:var(--text);
+  color: var(--text);
   font-weight: 500;
+}
+
+.text-project-details {
+  background: var(--primary);
+  filter:grayscale(20%);
+  line-height: 3;
+  width: fit-content;
+  padding: 0 10px;
+  border-radius: 3px;
 }
 
 .technologies {

@@ -42,6 +42,7 @@ export const Project = () => {
                 <div className="text-box">
                     <p>{project.description}</p>
                     <p>{project.descriptionLong}</p>
+                    <p className="text-project-details">{project.details}</p>
                 </div>
                 <div className="mask">
                     <img src={`/images/${project.id}0.png`} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
