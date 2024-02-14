@@ -61,6 +61,10 @@ body {
   flex-direction: column;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 /* HEADER */
 
 header {
@@ -277,6 +281,10 @@ img {
 
 #container-project a {
   margin: 0;
+}
+
+.service-card {
+
 }
 
 /* HEADLINES */
