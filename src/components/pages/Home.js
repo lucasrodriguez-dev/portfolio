@@ -1,25 +1,27 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { ProjectList } from './ProjectList';
 
 export const Home = () => {
   return (
     <section>
       <article className="container-main">
         <article className="container" id="container-presentation">
-          <p>
-            <span id="p-presentation">Hey there! I am a <strong>Computer Engineering</strong> student, from Uruguay 🇺🇾.</span>
-          </p>
-          <p>
-            I have <strong>1 year of experience</strong> working on Front-End ⭐ and Back-End 🧠.
+          <p id="p-presentation">
+            <strong>Computer Engineering</strong> student, from Uruguay 🇺🇾.
             <br />
-            I really like learning new technologies and I can adapt to them easily.
+            <strong>1 year of experience</strong> working on Front-End ⭐ and Back-End 🧠.
             <br />
-            People who know me consider me <span className="highlight">smart, serious and dedicated</span>. 
+            <span className="highlight-secondary">Smart, serious and dedicated</span>.
           </p>
-          <Link to="/portfolio" className="button-primary">Look at my work</Link>
+          <h3 className="subheading">Some projects</h3>
+          <ProjectList limit={3} />
+          <Link to="/portfolio" className="button-primary">More of my work</Link>
         </article>
         <article>
-          <img className="image" src={"/images/me.png"} />
+          <div className="blob">
+            <img className="image" src={"/images/me.png"} id="image-me"/>
+          </div>
         </article>
       </article>
     </section>

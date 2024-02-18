@@ -8,7 +8,7 @@ import { Curriculum } from '../components/pages/Curriculum';
 import { Header } from '../components/layout/Header';
 import { Footer } from '../components/layout/Footer';
 import { NotFound } from '../components/pages/NotFound';
-import { Project } from '../components/pages/Project';
+import { ProjectPage } from '../components/pages/ProjectPage';
 
 export const MyRoutes = () => {
     return (
@@ -22,7 +22,7 @@ export const MyRoutes = () => {
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/services" element={<Services />} />
                     <Route path="/cv" element={<Curriculum />} />
-                    <Route path="/project/:id" element={<Project />} />
+                    <Route path="/project/:id" element={<ProjectPage />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
             </section>
