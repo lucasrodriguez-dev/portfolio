@@ -324,7 +324,7 @@ img {
 }
 
 #image-contact {
-  background-color: var(--accent);
+  background: linear-gradient(120deg, var(--accent), var(--primary));
 }
 
 #container-contact-info-info {
