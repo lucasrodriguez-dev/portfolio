@@ -7,7 +7,7 @@ export const Services = () => {
     <section>
       <article id="container-services">
         <h3 className="heading">Services</h3>
-        <ul className="flex flex-row flex-wrap">
+        <ul className="flex flex-row flex-wrap services">
           {
             myServices.map(service => (
               <li key={service.id}>

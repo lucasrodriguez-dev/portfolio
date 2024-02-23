@@ -8,24 +8,25 @@ export const Service = ({ id }) => {
 
     return (
         <div className="service-card">
-            <div style={{ width: "40px", height: "40px", overflow: "hidden" }}>
+            <div className="container-service-icon">
                 <img src={`icons/${theService.icon}.png`} alt={`${theService.name} icon`} title={theService.name} style={{ width: "100%", height: "100%", objectFit: "contain" }} />
             </div>
-            {theService.name}
-            {theService.description}
-            <ul className="technologies flex flex-row">
-                {
-                    theService.technologies &&
-                    theService.technologies.map(technologie => {
-                        console.log(technologie.toLowerCase());
-                        return <li key={technologie}>
-                            <div style={{ width: "40px", height: "40px", overflow: "hidden" }}>
-                                <img src={`/icons/${technologie.toLowerCase()}.png`} alt={technologie} title={technologie} style={{ width: "100%", height: "100%", objectFit: "contain" }} />
-                            </div>
-                        </li>
-                    })
-                }
-            </ul>
+            <h4>{theService.name}</h4>
+            <div id="separator-p-technologie">
+                <p>{theService.description}</p>
+                <ul className="technologies flex flex-row">
+                    {
+                        theService.technologies &&
+                        theService.technologies.map(technologie => {
+                            return <li key={technologie}>
+                                <div style={{ width: "45px", height: "45px", overflow: "hidden" }}>
+                                    <img src={`/icons/${technologie.toLowerCase()}.png`} alt={technologie} title={technologie} style={{ width: "100%", height: "100%", objectFit: "contain" }} />
+                                </div>
+                            </li>
+                        })
+                    }
+                </ul>
+            </div>
         </div>
     )
 }

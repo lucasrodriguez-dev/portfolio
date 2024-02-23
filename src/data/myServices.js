@@ -9,7 +9,7 @@ export const myServices = [
     {
         "id": 1,
         "name": "Desktop Development",
-        "description": "Are looking for someone to build a desktop program? I can do it!",
+        "description": "Are you looking for someone to build a desktop program? I can do it!",
         "technologies": ["Java", "Swing"],
         "icon": "desktop"
     },
