@@ -468,7 +468,7 @@ button:hover,
 }
 
 /* INPUTS */
-
+input[type="text"],
 input[type="email"],
 textarea {
   display: block;
@@ -486,7 +486,9 @@ textarea {
 textarea {
   border-radius: 5px 10px;
   resize: none;
-  height: 180px;
+  height: 150px;
+  scrollbar-color: var(--primary) var(--secondary);
+  scrollbar-width:thin;
 }
 
 /* FOOTER */

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ProjectList } from './ProjectList';
+import { ProjectList } from '../mycomponents/ProjectList';
 
-export const Home = () => {
+export const HomePage = () => {
   return (
     <section>
       <article className="container-main">
@@ -16,7 +16,7 @@ export const Home = () => {
           </p>
           <h3 className="subheading">Some projects</h3>
           <ProjectList limit={3} />
-          <Link to="/portfolio" className="button-primary">More of my work</Link>
+          <Link to="/myportfolio" className="button-primary">More of my work</Link>
         </article>
         <article>
           <div className="blob">

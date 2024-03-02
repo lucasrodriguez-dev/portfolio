@@ -1,8 +1,8 @@
 import React from 'react';
 import { myServices } from "../../data/myServices";
-import { Service } from './Service';
+import { Service } from '../mycomponents/Service';
 
-export const Services = () => {
+export const ServicesPage = () => {
   return (
     <section>
       <article id="container-services">

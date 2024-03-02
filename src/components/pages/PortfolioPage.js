@@ -1,9 +1,7 @@
 import React from 'react';
-import { myProjects } from "../../data/myProjects";
-import { Link } from "react-router-dom";
-import { ProjectList } from './ProjectList';
+import { ProjectList } from '../mycomponents/ProjectList';
 
-export const Portfolio = () => {
+export const PortfolioPage = () => {
   return (
     <section>
       <article id="container-portfolio">

@@ -1,13 +1,13 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, NavLink, Link } from 'react-router-dom';
-import { Home } from '../components/pages/Home';
-import { Portfolio } from '../components/pages/Portfolio';
-import { Contact } from '../components/pages/Contact';
-import { Services } from '../components/pages/Services';
-import { Curriculum } from '../components/pages/Curriculum';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HomePage } from '../components/pages/HomePage';
+import { PortfolioPage } from '../components/pages/PortfolioPage';
+import { ContactPage } from '../components/pages/ContactPage';
+import { ServicesPage } from '../components/pages/ServicesPage';
+import { CurriculumPage } from '../components/pages/CurriculumPage';
 import { Header } from '../components/layout/Header';
 import { Footer } from '../components/layout/Footer';
-import { NotFound } from '../components/pages/NotFound';
+import { NotFoundPage } from '../components/pages/NotFoundPage';
 import { ProjectPage } from '../components/pages/ProjectPage';
 
 export const MyRoutes = () => {
@@ -17,13 +17,13 @@ export const MyRoutes = () => {
             {/* CONTENT */}
             <section className="content">
                 <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/portfolio" element={<Portfolio />} />
-                    <Route path="/contact" element={<Contact />} />
-                    <Route path="/services" element={<Services />} />
-                    <Route path="/cv" element={<Curriculum />} />
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/myportfolio" element={<PortfolioPage />} />
+                    <Route path="/contact" element={<ContactPage />} />
+                    <Route path="/services" element={<ServicesPage />} />
+                    <Route path="/cv" element={<CurriculumPage />} />
                     <Route path="/project/:id" element={<ProjectPage />} />
-                    <Route path="*" element={<NotFound />} />
+                    <Route path="*" element={<NotFoundPage />} />
                 </Routes>
             </section>
             <Footer />

@@ -2,7 +2,7 @@ export const myProjects = [
     {
         "id": "katapoint",
         "name": "KataPoint",
-        "url": "https://github.com/lucasrodriguez-dev/KataPoint",
+        "url": "https://github.com/lucasrodriguez-dev/katapoint",
         "technologies": ["HTML5", "CSS3", "JavaScript", "jQuery", "PHP", "MySQL"],
         "categories": "Web, MVC, Full-Stack",
         "description": "Manage any karate tournament in kata modality: register competitors, follow their confrontations and rate them to see who wins.",
@@ -12,7 +12,7 @@ export const myProjects = [
     {
         "id": "luthitv",
         "name": "LuthiTV",
-        "url": "https://github.com/lucasrodriguez-dev/LuthiTV",
+        "url": "https://github.com/lucasrodriguez-dev/luthitv",
         "technologies": ["HTML5", "CSS3", "JavaScript", "React"],
         "categories": "Web, SPA, Full-Stack",
         "description": "Create, update, delete and search as many movie cards as you want.",
@@ -22,7 +22,7 @@ export const myProjects = [
     {
         "id": "laboratory-computer-monitor",
         "name": "Laboratory Computer Monitor",
-        "url": "https://github.com/lucasrodriguez-dev/Laboratory-Computer-Monitor",
+        "url": "https://github.com/lucasrodriguez-dev/laboratory-computer-monitor",
         "technologies": ["Java", "Swing"],
         "categories": "Desktop, Back-End",
         "description": "Improve the electrical efficiency of your workplace by monitoring the electrical consumption of the computers in there.",

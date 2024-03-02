@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Curriculum = () => {
+export const CurriculumPage = () => {
   return (
     <section>
       <article id="container-cv">

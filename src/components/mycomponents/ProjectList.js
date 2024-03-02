@@ -1,6 +1,5 @@
 import React from 'react'
 import { myProjects } from '../../data/myProjects';
-import { Link } from 'react-router-dom';
 import { Project } from './Project';
 
 export const ProjectList = ({limit}) => {
