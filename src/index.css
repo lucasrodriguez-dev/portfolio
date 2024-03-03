@@ -198,8 +198,8 @@ nav ul li a.active {
   line-height: 2;
 }
 
-p #p-presentation {
-  font-size: 1.7rem;
+#container-me {
+  transform: translateX(200px);
 }
 
 #image-me {
@@ -528,6 +528,174 @@ footer {
 
 /* RESPONSIVE */
 
+/* MacBook Pro */
+@media (max-width: 1440px) {
+
+  /* HEADLINES */
+  h1 {
+    font-size: 5rem;
+  }
+
+  h2 {
+    font-size: 2.49rem;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .subheading {
+    font-size: 1.41rem;
+  }
+
+  /* HOMEPAGE */
+  #container-me {
+    transform: translateX(-100px);
+  }
+
+  /* SERVICES */
+  .service-card {
+    width: 350px;
+  }
+}
+
+/* iPad */
+@media (max-width: 768px) {
+
+  /* GENERAL */
+  header {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    justify-content: space-evenly;
+  }
+
+  /* NAVBAR */
+  nav.navbar ul {
+    margin: 0;
+  }
+
+  nav.navbar ul li {
+    margin: 0 40px 0 0;
+  }
+
+  /* HOMEPAGE */
+  .blob {
+    width: 200px;
+    height: 200px;
+  }
+
+  #p-presentation {
+    width: 500px;
+    font-size: 1.2rem;
+    margin-right: 100px;
+  }
+
+  .project .mask .overlay p {
+    font-size: small;
+  }
+
+  /* SERVICES */
+  .service-card {
+    width: 280px;
+  }
+
+  /* CONTACT */
+  #container-contact-info-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
+
+/* iPhone 12 Pro */
+@media (max-width: 390px) {
+
+  /* HEADLINES */
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 1.9rem
+  }
+
+  .heading {
+    font-size: 1.6rem;
+  }
+
+  .subheading {
+    font-size: 1.13rem;
+  }
+
+  /* NAVBAR */
+  nav.navbar ul li a {
+    font-size: small;
+  }
+
+  nav.navbar ul li {
+    margin: 0 20px 0 0;
+  }
+
+  /* HOMEPAGE */
+  #container-p-me {
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+
+  #p-presentation {
+    width: 350px;
+    font-size: 1.2rem;
+    margin-right: 100px;
+  }
+
+  #container-me {
+    align-self: center;
+  }
+
+  .projects {
+    flex-wrap: wrap;
+  }
+
+  .project {
+    flex-basis: 100%;
+  }
+
+  /* PROJECT */
+  #project-mask-technologies .technologies {
+    flex-direction: row;
+    margin: -20px 0 50px 0;
+  }
+
+  #project-technologies {
+    width: 300px;
+  }
+
+  .project span {
+    font-size: small;
+  }
+
+  .text-box p {
+    font-size: small;
+  }
+
+  .text-box p.highlight-secondary {
+    font-size: 1rem;
+  }
+
+  /* CONTACT */
+  #container-contact-page {
+    flex-direction: column;
+  }
+
+  #container-contact {
+    width: 100%;
+  }
+
+  #container-contact-info .blob {
+    display: none;
+  }
+
+}
 
 /* ANIMATIONS */
 

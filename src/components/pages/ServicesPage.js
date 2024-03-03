@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { myServices } from "../../data/myServices";
 import { Service } from '../mycomponents/Service';
 
 export const ServicesPage = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <section>
       <article id="container-services">

@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { ContactForm } from '../mycomponents/ContactForm';
 import { Icons } from '../mycomponents/Icons';
 
 export const ContactPage = () => {
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <section>
       <h3 className="heading">Contact</h3>
-      <article className="container-main">
+      <article className="container-main" id="container-contact-page">
         <ContactForm />
         <article id="container-contact-info">
           <div className="blob">

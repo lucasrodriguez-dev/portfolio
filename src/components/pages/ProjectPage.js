@@ -9,6 +9,7 @@ export const ProjectPage = () => {
     const params = useParams();
 
     useEffect(() => {
+        window.scrollTo(0, 0);
         let projectId = params.id;
         let project = myProjects.filter(proj => proj.id === projectId)[0];
         setProject(project);
@@ -22,7 +23,7 @@ export const ProjectPage = () => {
                     <div className="mask">
                         <img src={`/images/${project.id}.png`} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                     </div>
-                    <div>
+                    <div id="project-technologies">
                         <ul className="technologies flex flex-column">
                             {
                                 project.technologies &&
