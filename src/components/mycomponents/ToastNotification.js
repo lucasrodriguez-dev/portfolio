@@ -1,14 +1,23 @@
 import React from 'react';
 
-export const ToastNotification = ({ notificationType }) => {
+export const ToastNotification = ({ status }) => {
 
   const receiver = "lucascsrodriguez@gmail.com";
 
-  const message = notificationType === 'success' ? `Your message was sent to ${receiver} ✔` : "Oops... An error has occurred ❌";
+  let notificationStatusClassName = "";
+  let notificationMessage = "";
+
+  if (status === 200) {
+    notificationStatusClassName = "success";
+    notificationMessage = `Your message was sent to ${receiver} ✔`;
+  } else {
+    notificationStatusClassName = "error";
+    notificationMessage = `Oops... Something went wrong ❌`;
+  }
 
   return (
-    <div className={`notification ${notificationType}`}>
-      {message}
+    <div className={`notification ${notificationStatusClassName}`}>
+      {notificationMessage}
     </div>
   )
 }

@@ -11,6 +11,10 @@
   --transition-duration: 300ms;
   --font-family: 'Poppins', sans-serif, system-ui;
   --container-project-mask-width: 85%;
+  --notification-success-bg-color: #d1fadf;
+  --notification-success-color: #047440;
+  --notification-error-bg-color: #ffb7b8;
+  --notification-error-color: #8d0000;
 }
 
 /* GENERAL */
@@ -94,10 +98,24 @@ body {
 
 .notification {
   position: absolute;
-  top: 0;
-  max-width: 300px;
-  padding:15px;
-  margin: 20px;
+  top: 20px;
+  transform: translateX(100%);
+  width: 500px;
+  padding: 10px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.notification.success {
+  background-color: var(--notification-success-bg-color);
+  color: var(--notification-success-color);
+  border: 1px solid var(--notification-success-color);
+}
+
+.notification.error {
+  background-color: var(--notification-error-bg-color);
+  color: var(--notification-error-color);
+  border: 1px solid var(--notification-error-color);
 }
 
 /* HEADER */
@@ -344,7 +362,7 @@ img {
 #separator-p-technologie {
   height: 80%;
   position: relative;
-  bottom:20px;
+  bottom: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -496,7 +514,7 @@ textarea {
   resize: none;
   height: 150px;
   scrollbar-color: var(--primary) var(--secondary);
-  scrollbar-width:thin;
+  scrollbar-width: thin;
 }
 
 /* FOOTER */
@@ -507,6 +525,9 @@ footer {
   margin-top: 35px;
   font-size: smaller;
 }
+
+/* RESPONSIVE */
+
 
 /* ANIMATIONS */
 

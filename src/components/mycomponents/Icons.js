@@ -24,6 +24,13 @@ export const Icons = () => {
                     </a>
                 </div>
             </li>
+            <li>
+                <div style={{ width: "40px", height: "40px", overflow: "hidden" }}>
+                    <a href="mailto:lucascsrodriguez@gmail.com" target="_blank">
+                        <img src={`/icons/gmail.png`} alt="lucascsrodriguez@gmail.com" title="Gmail" style={{ width: "100%", height: "100%", objectFit: "contain" }} />
+                    </a>
+                </div>
+            </li>
         </ul>
     )
 }
