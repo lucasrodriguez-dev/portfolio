@@ -14,7 +14,6 @@ export const MyRoutes = () => {
     return (
         <BrowserRouter>
             <Header />
-            {/* CONTENT */}
             <section className="content">
                 <Routes>
                     <Route path="/" element={<HomePage />} />

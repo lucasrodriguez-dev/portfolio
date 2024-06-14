@@ -18,7 +18,7 @@ export const HomePage = () => {
               <br />
               <strong>1 year of experience</strong> working on Front-End ⭐ and Back-End 🧠.
               <br />
-              <span className="highlight-secondary">Smart, serious and dedicated</span>.
+              <span className="highlight-secondary">Organized, analytical and dedicated.</span>
             </p>
             <article id="container-me">
               <div className="blob">
