@@ -15,6 +15,7 @@
   --notification-success-color: #047440;
   --notification-error-bg-color: #ffb7b8;
   --notification-error-color: #8d0000;
+  --carousel-width: 80%;
 }
 
 /* GENERAL */
@@ -38,7 +39,7 @@ body {
 
 .layout {
   margin: 0 auto;
-  width: 90%;
+  width: 80%;
 }
 
 .highlight {
@@ -50,8 +51,7 @@ body {
 }
 
 .highlight-secondary {
-  background-color: var(--accent);
-  color: var(--background);
+  font-weight: 600;
   padding: 5px;
   border-radius: 5px;
 }
@@ -129,7 +129,7 @@ body {
 
 header {
   max-height: 12vh;
-  width: 92vw;
+  width: 100%;
   padding: 2.5vh 0 4vh 0;
   border-bottom: var(--border-style);
   margin-bottom: 35px;
@@ -185,12 +185,19 @@ nav ul li a.active {
   padding: 0 0 80px 0;
 }
 
-.container {
-  width: 60%;
+.container, .container-small {
   height: auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+
+.container {
+  width: 100%;
+}
+
+.container-small {
+  width: 60%;
 }
 
 .container-main {
@@ -199,19 +206,35 @@ nav ul li a.active {
   justify-content: space-between;
 }
 
-#p-presentation {
-  text-align: left;
-  width: 1050px;
-  font-size: 1.5rem;
-  line-height: 2;
-}
-
 #container-me {
   transform: translateX(200px);
 }
 
 #image-me {
   background-color: var(--accent);
+}
+
+/*
+  CAROUSEL
+*/
+
+.embla {
+  overflow: hidden;
+  width: var(--carousel-width);
+  height: 100%;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+.embla__slide img {
+  width: 100%;
+  height: 650px;
+  object-fit: cover;
+  overflow: hidden;
 }
 
 .icons {
@@ -313,12 +336,12 @@ img {
 }
 
 .text-box {
-  width: var(--container-project-mask-width);
+  width: var(--carousel-width);
   box-sizing: border-box;
   padding: 15px;
   border: 1px solid #696969;
   border-radius: 5px;
-  margin: 0 0 70px 0;
+  margin: 30px 0 60px 0;
   text-align: left;
   background-color: var(--secondary);
   color: var(--text);
@@ -382,6 +405,7 @@ img {
   overflow: hidden;
   margin: -35px auto 0;
   background-color: var(--text);
+  color: var(--background);
   border-radius: 4px;
   padding: 7px;
 }
@@ -470,7 +494,8 @@ h2 {
 
 button,
 .button-primary,
-.button-secondary {
+.button-secondary,
+.a-button {
   text-decoration: none;
   padding: 15px 35px;
   border: var(--border-style-button);
@@ -494,7 +519,7 @@ button:hover,
 .button-primary {
   background-color: var(--primary);
   margin-left: 0;
-  box-shadow: 0 7px 17px var(--accent);
+  box-shadow: 0 5px 7px var(--accent);
 }
 
 .button-secondary {
@@ -528,6 +553,7 @@ textarea {
 /* FOOTER */
 
 footer {
+  width: 100%;
   padding: 2.5vh 0 4vh 0;
   border-top: var(--border-style);
   margin-top: auto;
@@ -561,6 +587,10 @@ footer {
     transform: translateX(-100px);
   }
 
+  #highlight-text {
+    text-decoration: underline;
+  }
+
   /* SERVICES */
   .service-card {
     width: 350px;
@@ -590,12 +620,6 @@ footer {
   .blob {
     width: 200px;
     height: 200px;
-  }
-
-  #p-presentation {
-    width: 500px;
-    font-size: 1.2rem;
-    margin-right: 100px;
   }
 
   .project .mask .overlay p {
@@ -646,13 +670,14 @@ footer {
 
   /* HOMEPAGE */
   #container-p-me {
-    flex-direction: column;
+    justify-content: space-between;
     margin-bottom: 30px;
   }
 
   #p-presentation {
-    width: 350px;
+    text-align: left;
     font-size: 1.2rem;
+    line-height: 2;
     margin-right: 100px;
   }
 

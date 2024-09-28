@@ -1,6 +1,7 @@
 import React from 'react'
 import { myProjects } from '../../data/myProjects';
 import { Link } from 'react-router-dom';
+import * as SiIcons from "react-icons/si";
 
 export const Project = ({ id }) => {
 
@@ -22,10 +23,13 @@ export const Project = ({ id }) => {
                 {
                     proj.technologies &&
                     proj.technologies.map(technologie => {
+                        const iconName = `Si${technologie.charAt(0).toUpperCase()}${technologie.slice(1)}`;
+                        const IconComponent = SiIcons[iconName];
                         return <li key={technologie}>
-                            <div style={{ width: "40px", height: "40px", overflow: "hidden" }}>
-                                <img src={`/icons/${technologie.toLowerCase()}.png`} alt={technologie} title={technologie} style={{ width: "100%", height: "100%", objectFit: "contain" }} />
-                            </div>
+                            {
+                                IconComponent ? <IconComponent size={25} title={technologie}/>
+                                : <span>{technologie}</span>
+                            }
                         </li>
                     })
                 }

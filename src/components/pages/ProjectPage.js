@@ -1,8 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { myProjects } from '../../data/myProjects';
+import * as SiIcons from "react-icons/si";
+import useEmblaCarousel from 'embla-carousel-react';
+import Autoplay from 'embla-carousel-autoplay';
 
 export const ProjectPage = () => {
+
+    const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay()]);
 
     const [project, setProject] = useState({});
 
@@ -20,19 +25,25 @@ export const ProjectPage = () => {
             <article id="container-project">
                 <h3 className="subheading">{project.name}</h3>
                 <div className="flex flex-row" id="project-mask-technologies">
-                    <div className="mask">
-                        <img src={`/images/${project.id}.png`} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                    <div className="embla" ref={emblaRef}>
+                        <div className="embla__container">
+                            <div className="embla__slide"><img src={`/images/${project.id}.png`} /></div>
+                            <div className="embla__slide"><img src={`/images/${project.id}0.png`} /></div>
+                            <div className="embla__slide"><img src={`/images/${project.id}1.png`} /></div>
+                        </div>
                     </div>
                     <div id="project-technologies">
                         <ul className="technologies flex flex-column">
                             {
                                 project.technologies &&
                                 project.technologies.map(technologie => {
-                                    console.log(technologie.toLowerCase());
+                                    const iconName = `Si${technologie.charAt(0).toUpperCase()}${technologie.slice(1)}`;
+                                    const IconComponent = SiIcons[iconName];
                                     return <li key={technologie}>
-                                        <div style={{ width: "50px", height: "50px", overflow: "hidden" }}>
-                                            <img src={`/icons/${technologie.toLowerCase()}.png`} alt={technologie} title={technologie} style={{ width: "100%", height: "100%", objectFit: "contain" }} />
-                                        </div>
+                                        {
+                                            IconComponent ? <IconComponent size={50} title={technologie} />
+                                                : <span>{technologie}</span>
+                                        }
                                     </li>
                                 })
                             }
@@ -44,13 +55,10 @@ export const ProjectPage = () => {
                     <p>{project.descriptionLong}</p>
                     <p className="highlight-secondary fit-content">{project.details}</p>
                 </div>
-                <div className="mask">
-                    <img src={`/images/${project.id}0.png`} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
-                </div>
-                <div className="mask">
-                    <img src={`/images/${project.id}1.png`} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
-                </div>
-                <a href={project.url} target="_blank" className="button-primary">See more</a>
+                {
+                    project.tryUrl !== "" && <a href={project.tryUrl} target="_blank" className="button-primary" style={{marginRight: "30px"}}>Try it</a>
+                }
+                <a href={project.url} target="_blank" className="button-secondary">See Code</a>
             </article>
         </section>
     )

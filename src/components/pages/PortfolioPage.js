@@ -10,7 +10,7 @@ export const PortfolioPage = () => {
   return (
     <section>
       <article id="container-portfolio">
-        <h3 className="heading">Portfolio</h3>
+        <h3 className="heading">Projects</h3>
         <ProjectList />
       </article>
     </section>

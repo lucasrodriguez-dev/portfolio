@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ProjectList } from '../mycomponents/ProjectList';
+import { Icons } from '../mycomponents/Icons';
 
 export const HomePage = () => {
 
@@ -16,9 +17,13 @@ export const HomePage = () => {
             <p id="p-presentation">
               <strong>Computer Engineering</strong> student, from Uruguay 🇺🇾.
               <br />
-              <strong>1 year of experience</strong> working on Front-End ⭐ and Back-End 🧠.
+              <strong>1 year of experience</strong> working on Front-End and Back-End 🚀.
               <br />
-              <span className="highlight-secondary">Organized, analytical and dedicated.</span>
+              <span id="highlight-text">Organized, analytical and dedicated.</span>
+              <br /><br />
+              <div>
+                <Icons />
+              </div>
             </p>
             <article id="container-me">
               <div className="blob">
@@ -28,7 +33,7 @@ export const HomePage = () => {
           </div>
           <h3 className="subheading">Some projects</h3>
           <ProjectList limit={3} />
-          <Link to="/myportfolio" className="button-primary">More of my work</Link>
+          <Link to="/myportfolio" className="button-primary">See more</Link>
         </article>
       </article>
     </section>
