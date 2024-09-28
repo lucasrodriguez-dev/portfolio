@@ -20,9 +20,6 @@ export const Header = () => {
                         <NavLink to="/myportfolio">Projects</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/cv">CV</NavLink>
-                    </li>
-                    <li>
                         <NavLink to="/contact">Contact</NavLink>
                     </li>
                 </ul>

@@ -4,7 +4,6 @@ import { HomePage } from '../components/pages/HomePage';
 import { PortfolioPage } from '../components/pages/PortfolioPage';
 import { ContactPage } from '../components/pages/ContactPage';
 import { ServicesPage } from '../components/pages/ServicesPage';
-import { CurriculumPage } from '../components/pages/CurriculumPage';
 import { Header } from '../components/layout/Header';
 import { Footer } from '../components/layout/Footer';
 import { NotFoundPage } from '../components/pages/NotFoundPage';
@@ -20,7 +19,6 @@ export const MyRoutes = () => {
                     <Route path="/myportfolio" element={<PortfolioPage />} />
                     <Route path="/contact" element={<ContactPage />} />
                     <Route path="/services" element={<ServicesPage />} />
-                    <Route path="/cv" element={<CurriculumPage />} />
                     <Route path="/project/:id" element={<ProjectPage />} />
                     <Route path="*" element={<NotFoundPage />} />
                 </Routes>

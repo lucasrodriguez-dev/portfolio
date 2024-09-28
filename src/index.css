@@ -429,27 +429,6 @@ img {
   background: linear-gradient(120deg, var(--accent), var(--primary));
 }
 
-#container-contact-info-info {
-  align-items: center;
-  justify-content: flex-start;
-  gap: 15px;
-  margin-top: 28px;
-}
-
-.container-location {
-  width: 150px;
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 9px;
-}
-
-.container-location p {
-  margin: 0;
-  line-height: 1;
-}
-
 /* HEADLINES */
 
 h1,
@@ -553,6 +532,9 @@ textarea {
 /* FOOTER */
 
 footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
   padding: 2.5vh 0 4vh 0;
   border-top: var(--border-style);
@@ -677,7 +659,6 @@ footer {
   #p-presentation {
     text-align: left;
     font-size: 1.2rem;
-    line-height: 2;
     margin-right: 100px;
   }
 

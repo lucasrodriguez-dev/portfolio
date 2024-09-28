@@ -55,10 +55,10 @@ export const ProjectPage = () => {
                     <p>{project.descriptionLong}</p>
                     <p className="highlight-secondary fit-content">{project.details}</p>
                 </div>
-                {
-                    project.tryUrl !== "" && <a href={project.tryUrl} target="_blank" className="button-primary" style={{marginRight: "30px"}}>Try it</a>
-                }
                 <a href={project.url} target="_blank" className="button-secondary">See Code</a>
+                {
+                    project.tryUrl !== "" && <a href={project.tryUrl} target="_blank" className="button-primary" style={{marginLeft: "30px"}}>Try it</a>
+                }
             </article>
         </section>
     )
