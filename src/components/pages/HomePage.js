@@ -33,7 +33,7 @@ export const HomePage = () => {
           </div>
           <h3 className="subheading">Some projects</h3>
           <ProjectList limit={3} />
-          <Link to="/myportfolio" className="button-primary">See more</Link>
+          <Link to="/projects" className="button-primary">See more</Link>
         </article>
       </article>
     </section>
