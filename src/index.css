@@ -1,25 +1,20 @@
 /* DECLARATION OF VARIABLES */
 
 :root {
-  --background: #232222
-    /*#F2FAF5*/
-  ;
-  --primary: #700000
-    /*#55B67E*/
-  ;
-  --secondary: hsl(0, 0%, 0%, 30%)
-    /*hsl(217, 40%, 70%, 30%)*/
-  ;
-  --secondary-withMoreOpacity: hsl(0, 0%, 0%, 50%)
-  /*hsl(217, 40%, 70%, 30%)*/
-  ;
-  --accent: #e22c7b
-    /*#7073C2*/
-  ;
-  --text: #e0e0e0
-    /*#060E09*/
-  ;
-  --gradient-main: linear-gradient(120deg, var(--primary), var(--accent));
+  --background-dark: #232222;
+  --background-light: #F2FAF5;
+  --primary-dark: #700000;
+  --primary-light: #55B67E;
+  --secondary-dark: hsl(0, 0%, 0%, 30%);
+  --secondary-light: hsl(217, 40%, 70%, 30%);
+  --secondary-withMoreOpacity-dark: hsl(0, 0%, 0%, 50%);
+  --secondary-withMoreOpacity-light: hsl(217, 40%, 70%, 30%);
+  --accent-dark: #e22c7b;
+  --accent-light: #7073C2;
+  --text-dark: #e0e0e0;
+  --text-light: #060E09;
+  --gradient-main-dark: linear-gradient(120deg, var(--primary-dark), var(--accent-dark));
+  --gradient-main-light: linear-gradient(120deg, var(--primary-light), var(--accent-light));
   --border-style: 1px solid var(--text);
   --border-style-button: 1px solid rgba(255, 255, 255, 0.1);
   --transition-duration: 300ms;
