@@ -4,8 +4,12 @@ import { myProjects } from '../../data/myProjects';
 import * as SiIcons from "react-icons/si";
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
+import { useContext } from 'react';
+import { LanguageContext } from '../../contexts/LanguageContext';
 
 export const ProjectPage = () => {
+
+    const { language, texts } = useContext(LanguageContext);
 
     const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay()]);
 
@@ -16,7 +20,7 @@ export const ProjectPage = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
         let projectId = params.id;
-        let project = myProjects.filter(proj => proj.id === projectId)[0];
+        let project = myProjects.find(proj => proj.id === projectId);
         setProject(project);
     }, []);
 
@@ -51,14 +55,14 @@ export const ProjectPage = () => {
                     </div>
                 </div>
                 <div className="text-box">
-                    <p>{project.description}</p>
-                    <p>{project.descriptionLong}</p>
-                    <p className="fit-content">{project.details}</p>
-                    <p className="highlight-secondary fit-content">Here I worked as a {project.categories}.</p>
+                    <p>{project.description[language]}</p>
+                    <p>{project.descriptionLong[language]}</p>
+                    <p className="fit-content">{project.details[language]}</p>
+                    <p className="highlight-secondary fit-content">{texts.projectRole} {project.categories}.</p>
                 </div>
-                <a href={project.url} target="_blank" className="button-secondary">See Code</a>
+                <a href={project.url} target="_blank" className="button-secondary">{texts.projectSecondaryButton}</a>
                 {
-                    project.tryUrl !== "" && <a href={project.tryUrl} target="_blank" className="button-primary" style={{marginLeft: "30px"}}>Try it</a>
+                    project.tryUrl !== "" && <a href={project.tryUrl} target="_blank" className="button-primary" style={{marginLeft: "30px"}}>{texts.projectPrimaryButton}</a>
                 }
             </article>
         </section>

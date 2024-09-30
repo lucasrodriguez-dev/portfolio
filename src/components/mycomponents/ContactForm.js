@@ -1,8 +1,11 @@
-import React, { useRef, useState } from 'react';
+import React, { useContext, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { ToastNotification } from './ToastNotification';
+import { LanguageContext } from '../../contexts/LanguageContext';
 
 export const ContactForm = () => {
+
+    const { texts } = useContext(LanguageContext);
 
     const [emailStatus, setEmailStatus] = useState(null);
     const [show, setShow] = useState(true);
@@ -39,10 +42,10 @@ export const ContactForm = () => {
                 )
             }
             <form ref={form} className="container-small" onSubmit={e => sendMail(e)}>
-                <input type="text" placeholder="Name" name="from_name" required />
-                <input type="email" placeholder="Email" name="from_email" required />
-                <textarea placeholder="Message" name="message" required></textarea>
-                <input className="button-primary" type="submit" value="Send" />
+                <input type="text" placeholder={texts.formName} name="from_name" required />
+                <input type="email" placeholder={texts.formEmail} name="from_email" required />
+                <textarea placeholder={texts.formMessage} name="message" required></textarea>
+                <input className="button-primary" type="submit" value={texts.formPrimaryButton} />
             </form>
         </article>
     )

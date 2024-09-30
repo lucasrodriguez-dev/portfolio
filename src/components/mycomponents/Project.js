@@ -2,8 +2,12 @@ import React from 'react'
 import { myProjects } from '../../data/myProjects';
 import { Link } from 'react-router-dom';
 import * as SiIcons from "react-icons/si";
+import { useContext } from 'react';
+import { LanguageContext } from '../../contexts/LanguageContext';
 
 export const Project = ({ id }) => {
+
+    const { language } = useContext(LanguageContext);
 
     const proj = myProjects.find(p => p.id === id);
 
@@ -12,7 +16,7 @@ export const Project = ({ id }) => {
             <div className="mask">
                 <img src={`/images/${proj.id}.png`} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                 <div className="overlay">
-                    <p>{proj.description}</p>
+                    <p>{proj.description[language]}</p>
                 </div>
             </div>
             <span>{proj.categories}</span>

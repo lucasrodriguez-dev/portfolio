@@ -1,7 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { ProjectList } from '../mycomponents/ProjectList';
+import { LanguageContext } from '../../contexts/LanguageContext';
 
 export const PortfolioPage = () => {
+
+  const { texts } = useContext(LanguageContext);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -10,7 +13,7 @@ export const PortfolioPage = () => {
   return (
     <section>
       <article id="container-portfolio">
-        <h3 className="heading">Projects</h3>
+        <h3 className="heading">{texts.navProjects}</h3>
         <ProjectList />
       </article>
     </section>

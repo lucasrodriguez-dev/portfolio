@@ -1,34 +1,36 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { NavLink } from 'react-router-dom';
-import { MdLanguage } from "react-icons/md";
 import ThemeSwitcher from '../mycomponents/ThemeSwitcher';
+import LanguageSwitcher from '../mycomponents/LanguageSwitcher';
+import { LanguageContext } from '../../contexts/LanguageContext';
 
 export const Header = () => {
+    const { texts } = useContext(LanguageContext);
     return (
         <header>
             <div id="container-title">
                 <h1>Lucas Rodríguez</h1>
-                <h2><span className="highlight">Software Developer</span></h2>
+                <h2><span className="highlight">{texts.subtitle}</span></h2>
             </div>
             <nav className="navbar">
                 <ul>
                     <li>
-                        <NavLink to="/">Home</NavLink>
+                        <NavLink to="/">{texts.navHome}</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/services">Services</NavLink>
+                        <NavLink to="/services">{texts.navServices}</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/projects">Projects</NavLink>
+                        <NavLink to="/projects">{texts.navProjects}</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/contact">Contact</NavLink>
+                        <NavLink to="/contact">{texts.navContact}</NavLink>
                     </li>
                     <li>
                         <ThemeSwitcher />
                     </li>
                     <li>
-                        <MdLanguage />
+                        <LanguageSwitcher />
                     </li>
                 </ul>
             </nav>

@@ -1,8 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { myServices } from "../../data/myServices";
 import { Service } from '../mycomponents/Service';
+import { LanguageContext } from '../../contexts/LanguageContext';
 
 export const ServicesPage = () => {
+
+  const { texts } = useContext(LanguageContext);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -11,7 +14,7 @@ export const ServicesPage = () => {
   return (
     <section>
       <article id="container-services">
-        <h3 className="heading">Services</h3>
+        <h3 className="heading">{texts.navServices}</h3>
         <ul className="flex flex-row flex-wrap services">
           {
             myServices.map(service => (

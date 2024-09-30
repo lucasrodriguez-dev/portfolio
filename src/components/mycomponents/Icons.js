@@ -1,5 +1,5 @@
 import React from 'react';
-import {BiDownload} from "react-icons/bi";
+import { SiReaddotcv } from "react-icons/si";
 import { myIcons } from '../../data/myIcons';
 import { Icon } from './Icon';
 
@@ -13,7 +13,7 @@ export const Icons = ({size}) => {
             <li>
                 <div style={{ width: downloadWidth, height: downloadHeight, alignContent: "center", borderRadius: "3px", padding: "0 10px" }}>
                     <a title="CV" target="_blank" href="https://drive.google.com/uc?export=download&id=1uSmMwD1mVKYRGZktHf_Efcpv9vkjaPmD" download="lucasrodriguez-cv.pdf" rel="noopener noreferrer">
-                        <BiDownload size={downloadHeight}/>
+                        <SiReaddotcv size={downloadHeight}/>
                     </a>
                 </div>
             </li>
