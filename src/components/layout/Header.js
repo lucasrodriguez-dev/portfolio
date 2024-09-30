@@ -1,5 +1,8 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
+import { MdDarkMode } from "react-icons/md";
+import { MdLightMode } from "react-icons/md";
+import { MdLanguage } from "react-icons/md";
 
 export const Header = () => {
     return (
@@ -22,6 +25,9 @@ export const Header = () => {
                     <li>
                         <NavLink to="/contact">Contact</NavLink>
                     </li>
+                    <MdDarkMode />
+                    <MdLightMode />
+                    <MdLanguage />
                 </ul>
             </nav>
         </header>

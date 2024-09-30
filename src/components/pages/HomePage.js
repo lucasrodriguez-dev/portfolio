@@ -15,7 +15,7 @@ export const HomePage = () => {
         <article className="container" id="container-presentation">
           <div className="flex flex-row" id="container-p-me">
             <p id="p-presentation">
-              <strong>Computer Engineering</strong> student, from Uruguay 🇺🇾.
+              <strong>Computer Engineering</strong> student from Montevideo, Uruguay 🇺🇾.
               <br />
               <strong>1 year of experience</strong> working on Front-End and Back-End 🚀.
               <br />

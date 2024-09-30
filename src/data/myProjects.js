@@ -8,7 +8,7 @@ export const myProjects = [
         "categories": "Web, MVC, Full-Stack",
         "description": "Manage any karate tournament in kata modality: register competitors, follow their confrontations and rate them to see who wins.",
         "descriptionLong": "If you want to carry out the internal management of the tournaments, you can log in as a Software Technician. On the other hand, if you only want to rate the competitors, you can enter as a Judge.",
-        "details": "Built with MVC architecture. JavaScript Controllers connect with PHP Controllers."
+        "details": "Built with MVC architecture. JavaScript Controllers are connected to PHP Controllers."
     },
     {
         "id": "luthitv",
