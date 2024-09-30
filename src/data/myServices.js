@@ -22,17 +22,17 @@ export const myServices = [
     },
     {
         "id": 3,
-        "name": "Task Automation",
-        "description": "I can simplify the management of your system. From creating custom scripts to optimizing existing workflows, my goal is to provide solutions that improve your productivity.",
-        "technologies": ["linux", "powershell"],
-        "icon": "task"
-    },
-    {
-        "id": 4,
         "name": "Image Edition",
         "description": "I can transform your photographs and graphics, improving their visual quality and enhancing their impact.",
         "technologies": ["adobephotoshop"],
         "icon": "image"
+    },
+    {
+        "id": 4,
+        "name": "Task Automation",
+        "description": "I can simplify the management of your system. From creating custom scripts to optimizing existing workflows, my goal is to provide solutions that improve your productivity.",
+        "technologies": ["linux", "powershell"],
+        "icon": "task"
     },
     {
         "id": 6,

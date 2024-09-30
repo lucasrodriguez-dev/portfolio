@@ -8,7 +8,7 @@ export const myProjects = [
         "categories": "Web, MVC, Full-Stack",
         "description": "Manage any karate tournament in kata modality: register competitors, follow their confrontations and rate them to see who wins.",
         "descriptionLong": "If you want to carry out the internal management of the tournaments, you can log in as a Software Technician. On the other hand, if you only want to rate the competitors, you can enter as a Judge.",
-        "details": "This was built using the MVC architecture. The Controller layer is divided in JavaScript Controllers and PHP Controllers."
+        "details": "Built with MVC architecture. JavaScript Controllers connect with PHP Controllers."
     },
     {
         "id": "luthitv",
@@ -19,6 +19,6 @@ export const myProjects = [
         "categories": "Web, SPA, Full-Stack",
         "description": "Create, update, delete and search as many movie cards as you want.",
         "descriptionLong": "",
-        "details": "This app is structured with components and it uses local storage to preserve information."
+        "details": "Structured with components. It uses local storage to preserve information."
     }
 ];

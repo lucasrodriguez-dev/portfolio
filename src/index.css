@@ -1,11 +1,22 @@
 /* DECLARATION OF VARIABLES */
 
 :root {
-  --background: #F2FAF5;
-  --primary: #55B67E;
-  --secondary: hsl(217, 40%, 70%, 30%);
-  --accent: #7073C2;
-  --text: #060E09;
+  --background: #232222
+    /*#F2FAF5*/
+  ;
+  --primary: #700000
+    /*#55B67E*/
+  ;
+  --secondary: hsl(0, 0%, 0%, 30%)
+    /*hsl(217, 40%, 70%, 30%)*/
+  ;
+  --accent: #e22c7b
+    /*#7073C2*/
+  ;
+  --text: #e0e0e0
+    /*#060E09*/
+  ;
+  --gradient-main: linear-gradient(120deg, var(--primary), var(--accent));
   --border-style: 1px solid var(--text);
   --border-style-button: 1px solid rgba(255, 255, 255, 0.1);
   --transition-duration: 300ms;
@@ -27,7 +38,7 @@
 body {
   position: relative;
   background-color: var(--background);
-  color: var(--paragraph);
+  color: var(--text);
   font-family: var(--font-family);
   font-size: 1rem;
   padding: 0;
@@ -43,7 +54,7 @@ body {
 }
 
 .highlight {
-  background: linear-gradient(120deg, var(--primary), var(--accent));
+  background: var(--gradient-main);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -185,7 +196,8 @@ nav ul li a.active {
   padding: 0 0 80px 0;
 }
 
-.container, .container-small {
+.container,
+.container-small {
   height: auto;
   display: flex;
   flex-direction: column;
@@ -206,12 +218,18 @@ nav ul li a.active {
   justify-content: space-between;
 }
 
+#p-presentation {
+  text-align: left;
+  font-size: 1.2rem;
+  margin-right: 100px;
+}
+
 #container-me {
   transform: translateX(200px);
 }
 
 #image-me {
-  background-color: var(--accent);
+  background: var(--gradient-main);
 }
 
 /*
@@ -223,13 +241,16 @@ nav ul li a.active {
   width: var(--carousel-width);
   height: 100%;
 }
+
 .embla__container {
   display: flex;
 }
+
 .embla__slide {
   flex: 0 0 100%;
   min-width: 0;
 }
+
 .embla__slide img {
   width: 100%;
   height: 650px;
@@ -259,7 +280,7 @@ nav ul li a.active {
 }
 
 .mask {
-  box-shadow: 0 12px 17px var(--accent);
+  box-shadow: 0 5px 17px var(--accent);
   border: 2px solid var(--secondary);
   border-radius: 5px;
   user-select: none;
@@ -301,7 +322,9 @@ img {
 .project .mask .overlay p {
   padding: 20px;
   text-align: center;
-  color: #eee;
+  color: var(--text)
+    /*#eee*/
+  ;
 }
 
 .project span {
@@ -419,16 +442,6 @@ img {
   letter-spacing: 1px;
 }
 
-#container-contact-info {
-  width: 50%;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-
-#image-contact {
-  background: linear-gradient(120deg, var(--accent), var(--primary));
-}
-
 /* HEADLINES */
 
 h1,
@@ -496,9 +509,8 @@ button:hover,
 }
 
 .button-primary {
-  background-color: var(--primary);
+  background: var(--gradient-main);
   margin-left: 0;
-  box-shadow: 0 5px 7px var(--accent);
 }
 
 .button-secondary {
@@ -516,6 +528,7 @@ textarea {
   border-radius: 5px;
   margin: 5px 0;
   outline: none;
+  background-color: var(--secondary);
   color: var(--text);
   font-size: 1.1rem;
   font-family: var(--font-family);
