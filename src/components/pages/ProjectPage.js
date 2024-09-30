@@ -53,7 +53,8 @@ export const ProjectPage = () => {
                 <div className="text-box">
                     <p>{project.description}</p>
                     <p>{project.descriptionLong}</p>
-                    <p className="highlight-secondary fit-content">{project.details}</p>
+                    <p className="fit-content">{project.details}</p>
+                    <p className="highlight-secondary fit-content">Here I worked as a {project.categories}.</p>
                 </div>
                 <a href={project.url} target="_blank" className="button-secondary">See Code</a>
                 {

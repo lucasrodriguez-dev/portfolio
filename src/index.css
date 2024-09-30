@@ -331,9 +331,7 @@ img {
 .project .mask .overlay p {
   padding: 20px;
   text-align: center;
-  color: var(--text)
-    /*#eee*/
-  ;
+  color: #fff;
 }
 
 .project span {

@@ -24,8 +24,12 @@ export const Header = () => {
                     <li>
                         <NavLink to="/contact">Contact</NavLink>
                     </li>
-                    <ThemeSwitcher />
-                    <MdLanguage />
+                    <li>
+                        <ThemeSwitcher />
+                    </li>
+                    <li>
+                        <MdLanguage />
+                    </li>
                 </ul>
             </nav>
         </header>

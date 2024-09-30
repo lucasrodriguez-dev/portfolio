@@ -7,9 +7,9 @@ const ThemeSwitcher = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
 
   return (
-    <button onClick={toggleTheme} style={buttonStyle}>
+    <a onClick={toggleTheme} style={buttonStyle}>
       {theme === "light" ? <MdDarkMode /> : <MdLightMode />}
-    </button>
+    </a>
   );
 };
 

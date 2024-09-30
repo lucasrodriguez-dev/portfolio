@@ -21,7 +21,7 @@ export const ThemeProvider = ({ children }) => {
       "--secondary-withMoreOpacity": "hsl(217, 40%, 70%, 30%)",
       "--accent": "#7073C2",
       "--text": "#060E09",
-      "--gradient-main": "linear-gradient(120deg, var(--primary-light), var(--accent-light))"
+      "--gradient-main": "linear-gradient(120deg, var(--primary-light), var(--accent-light))",
     };
 
     const darkTheme = {
