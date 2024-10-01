@@ -138,7 +138,7 @@ body {
 /* HEADER */
 
 header {
-  max-height: 12vh;
+  height: 12vh;
   width: 100%;
   padding: 2.5vh 0 4vh 0;
   border-bottom: var(--border-style);
@@ -563,173 +563,50 @@ footer {
 }
 
 /* RESPONSIVE */
-
-/* MacBook Pro */
-@media (max-width: 1440px) {
-
-  /* HEADLINES */
-  h1 {
-    font-size: 5rem;
-  }
-
-  h2 {
-    font-size: 2.49rem;
-  }
-
-  .heading {
-    font-size: 2rem;
-  }
-
-  .subheading {
-    font-size: 1.41rem;
-  }
-
-  /* HOMEPAGE */
-
+@media (min-width: 360px) {
   #container-me {
-    transform: translateX(-100px);
-  }
-
-  #highlight-text {
-    text-decoration: underline;
-  }
-
-  /* SERVICES */
-  .service-card {
-    width: 350px;
+    display: none;
   }
 }
 
-/* iPad */
-@media (max-width: 768px) {
-
-  /* GENERAL */
+@media (min-width: 360px) and (max-width: 374px){
   header {
-    flex-direction: column-reverse;
-    align-items: flex-start;
-    justify-content: space-evenly;
+    height: 20vh;
   }
-
-  /* NAVBAR */
-  nav.navbar ul {
+  h1{
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  h3, .subheading {
+    font-size: 20px;
+  }
+  .navbar ul {
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  .navbar ul li {
     margin: 0;
   }
-
-  nav.navbar ul li {
-    margin: 0 40px 0 0;
+  .navbar ul li a {
+    font-size: smaller;
   }
-
-  /* HOMEPAGE */
-  .blob {
-    width: 200px;
-    height: 200px;
+  p {
+    font-size: 1rem;
   }
-
-  .project .mask .overlay p {
-    font-size: small;
+  .services {
+    gap: 50px;
   }
-
-  /* SERVICES */
   .service-card {
-    width: 280px;
+    width: fit-content;
+    height: fit-content;
+    flex-basis: 100%;
   }
-
-  /* CONTACT */
-  #container-contact-info-info {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
-  }
-}
-
-/* iPhone 12 Pro */
-@media (max-width: 390px) {
-
-  /* HEADLINES */
-  h1 {
-    font-size: 4rem;
-  }
-
-  h2 {
-    font-size: 1.9rem
-  }
-
-  .heading {
-    font-size: 1.6rem;
-  }
-
-  .subheading {
-    font-size: 1.13rem;
-  }
-
-  /* NAVBAR */
-  nav.navbar ul li a {
-    font-size: small;
-  }
-
-  nav.navbar ul li {
-    margin: 0 20px 0 0;
-  }
-
-  /* HOMEPAGE */
-  #container-p-me {
-    justify-content: space-between;
-    margin-bottom: 30px;
-  }
-
-  #p-presentation {
-    text-align: left;
-    font-size: 1.2rem;
-    margin-right: 100px;
-  }
-
-  #container-me {
-    align-self: center;
-  }
-
-  .projects {
-    flex-wrap: wrap;
-  }
-
   .project {
     flex-basis: 100%;
   }
-
-  /* PROJECT */
-  #project-mask-technologies .technologies {
-    flex-direction: row;
-    margin: -20px 0 50px 0;
-  }
-
-  #project-technologies {
-    width: 300px;
-  }
-
-  .project span {
-    font-size: small;
-  }
-
-  .text-box p {
-    font-size: small;
-  }
-
-  .text-box p.highlight-secondary {
-    font-size: 1rem;
-  }
-
-  /* CONTACT */
-  #container-contact-page {
-    flex-direction: column;
-  }
-
-  #container-contact {
-    width: 100%;
-  }
-
-  #container-contact-info .blob {
-    display: none;
-  }
-
 }
 
 /* ANIMATIONS */
