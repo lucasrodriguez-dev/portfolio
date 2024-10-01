@@ -565,7 +565,7 @@ footer {
 /* RESPONSIVE */
 @media (min-width: 360px) and (max-width: 720px){
   .container-small {
-    width: 100%;
+    width: 90%;
   }
 }
 
@@ -596,8 +596,11 @@ footer {
   .navbar ul li a {
     font-size: smaller;
   }
-  p {
+  p, #p-presentation {
     font-size: 1rem;
+  }
+  footer p {
+    font-size: smaller;
   }
   .services {
     gap: 50px;
@@ -641,6 +644,9 @@ footer {
   }
   p, #p-presentation {
     font-size: 1.5rem;
+  }
+  footer p {
+    font-size: smaller;
   }
   #container-me {
     transform: translateX(-70px);
