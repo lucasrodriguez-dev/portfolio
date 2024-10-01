@@ -563,13 +563,10 @@ footer {
 }
 
 /* RESPONSIVE */
-@media (min-width: 360px) {
+@media (min-width: 360px) and (max-width: 375px){
   #container-me {
     display: none;
   }
-}
-
-@media (min-width: 360px) and (max-width: 374px){
   header {
     height: 20vh;
   }
