@@ -20,23 +20,23 @@ export const myProjects = [
         }
     },
     {
-        id: "luthitv",
-        name: "LuthiTV",
-        url: "https://github.com/lucasrodriguez-dev/luthitv",
-        tryUrl: "https://luthitv.netlify.app/",
-        technologies: ["html5", "css3", "javascript", "react"],
-        categories: "Web, SPA, Full-Stack",
+        id: "yourblog",
+        name: "YourBlog",
+        url: "https://github.com/lucasrodriguez-dev/myblog",
+        tryUrl: "",
+        technologies: ["html5", "css3", "javascript", "react", "nodedotjs", "express", "mongodb"],
+        categories: "Web, Full-Stack",
         description: {
-            en: "Create, update, delete and search as many movie cards as you want.",
-            es: "Crea, actualiza, elimina y busca cualquier película que desees."
+            en: "Create, update, delete and search your own articles. You can also upload images.",
+            es: "Crea, actualiza, elimina y busca tus propios artículos. También puedes subir imágenes."
         },
         descriptionLong: {
             en: "",
             es: ""
         },
         details: {
-            en: "Structured with components. It uses local storage to preserve information.",
-            es: "Estructurado con componentes. Usa local storage para persistir la información."
+            en: "It's connected to a NoSQL database to preserve information.",
+            es: "Está conectado a una base de datos NoSQL para persistir la información."
         }
     }
 ];
