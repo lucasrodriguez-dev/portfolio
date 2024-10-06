@@ -37,7 +37,8 @@ body {
 
 .layout {
   margin: 0 auto;
-  width: 80%;
+  width: 80vw;
+  overflow: hidden;
 }
 
 .highlight {
@@ -80,6 +81,10 @@ body {
 
 .flex-wrap {
   flex-wrap: wrap;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
 }
 
 .fit-content {
@@ -197,10 +202,6 @@ nav ul li a.active {
   width: 100%;
 }
 
-.container-small {
-  width: 60%;
-}
-
 .container-main {
   padding: 25px 0;
   display: flex;
@@ -215,24 +216,10 @@ nav ul li a.active {
 }
 #container-contact-form form {
   width: 100%;
-  display: grid;
-  grid-template-areas: 
-  "name email"
-  "message message"
-  "send send";
   gap: 10px;
 }
-#container-contact-form form #name_input {
-  grid-area: name;
-}
-#container-contact-form form #email_input {
-  grid-area: email;
-}
-#container-contact-form form #message_input {
-  grid-area: message;
-}
-#container-contact-form form #submit_input {
-  grid-area: send;
+#container-contact-form form input, #container-contact-form form textarea {
+  width: 100%;
 }
 
 #p-presentation {
@@ -537,6 +524,7 @@ h2 {
 button,
 .button-primary,
 .button-secondary,
+.button-terciary,
 .a-button {
   text-decoration: none;
   padding: 15px 35px;
@@ -566,6 +554,10 @@ button:hover,
 
 .button-secondary {
   background-color: var(--secondary);
+}
+
+.button-terciary {
+  margin: 0;
 }
 
 /* INPUTS */
@@ -696,8 +688,9 @@ footer {
   footer p {
     font-size: smaller;
   }
-  #container-me {
-    transform: translateX(-70px);
+  .blob {
+    width: 180px;
+    height: 180px;
   }
   .services {
     gap: 50px;

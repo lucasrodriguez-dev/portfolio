@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import * as SiIcons from "react-icons/si";
 import { useContext } from 'react';
 import { LanguageContext } from '../../contexts/LanguageContext';
+import { SiGithub } from 'react-icons/si';
+import { FiExternalLink } from "react-icons/fi";
 
 export const Project = ({ id }) => {
 
@@ -14,7 +16,7 @@ export const Project = ({ id }) => {
     return (
         <div className="project-item">
             <div className="mask">
-                <img src={`/images/${proj.id}.png`}/>
+                <img src={`/images/${proj.id}.png`} />
                 <div className="overlay">
                     <p>{proj.description[language]}</p>
                 </div>
@@ -32,12 +34,24 @@ export const Project = ({ id }) => {
                             const IconComponent = SiIcons[iconName];
                             return <li key={technologie}>
                                 {
-                                    IconComponent ? <IconComponent size={25} title={technologie} />
+                                    IconComponent ? <IconComponent size={18} title={technologie} />
                                         : <span>{technologie}</span>
                                 }
                             </li>
                         })
                     }
+                </ul>
+                <ul className="flex flex-row">
+                    <li>
+                        <a href={proj.url} target="_blank" className="button-terciary">
+                            <SiGithub />
+                        </a>
+                    </li>
+                    <li>
+                        <a href={proj.url} target="_blank" className="button-terciary">
+                            <FiExternalLink />
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>

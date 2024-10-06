@@ -42,7 +42,7 @@ export const ContactForm = () => {
                     <ToastNotification status={emailStatus} />
                 )
             }
-            <form ref={form} className="container-small" onSubmit={e => sendMail(e)}>
+            <form ref={form} className="container" onSubmit={e => sendMail(e)}>
                 <input type="text" placeholder={texts.formName} name="from_name" id="name_input" required />
                 <input type="email" placeholder={texts.formEmail} name="from_email" id="email_input" required />
                 <textarea placeholder={texts.formMessage} name="message" id="message_input" required></textarea>

@@ -64,9 +64,7 @@ export const HomePage = () => {
         <Element name="contact" className="container">
           <article id="container-contact">
             <h3 className="heading">{texts.contact}</h3>
-            <article id="container-contact-page">
-              <ContactForm />
-            </article>
+            <ContactForm />
           </article>
         </Element>
       </article>
