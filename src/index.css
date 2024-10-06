@@ -2,6 +2,7 @@
 
 :root {
   --gradient-main: linear-gradient(120deg, var(--primary), var(--accent));
+  --gradient-secondary: linear-gradient(120deg, var(--secondary), var(--accent));
   --border-style: 1px solid var(--text);
   --border-style-button: 1px solid rgba(255, 255, 255, 0.1);
   --transition-duration: 300ms;
@@ -169,6 +170,8 @@ a {
   text-decoration: none;
   color: var(--text);
   font-size: 1.1rem;
+  cursor: pointer;
+  user-select: none;
 }
 
 nav ul li a:hover,
@@ -204,6 +207,32 @@ nav ul li a.active {
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-around;
+  gap: 15vh;
+}
+
+#container-contact {
+  width: 100%;
+}
+#container-contact-form form {
+  width: 100%;
+  display: grid;
+  grid-template-areas: 
+  "name email"
+  "message message"
+  "send send";
+  gap: 10px;
+}
+#container-contact-form form #name_input {
+  grid-area: name;
+}
+#container-contact-form form #email_input {
+  grid-area: email;
+}
+#container-contact-form form #message_input {
+  grid-area: message;
+}
+#container-contact-form form #submit_input {
+  grid-area: send;
 }
 
 #p-presentation {
@@ -270,7 +299,7 @@ nav ul li a.active {
 }
 
 .project-item {
-  background-color: var(--secondary);
+  background: var(--project-background);
   border: none;
   border-radius: 10px;
   overflow: hidden;
@@ -420,7 +449,7 @@ img {
   height: 350px;
   padding: 25px;
   border-radius: 10px;
-  background: var(--secondary);
+  background: var(--service-background);
   transition: all var(--transition-duration) ease;
   user-select: none;
 }
@@ -543,12 +572,9 @@ button:hover,
 input[type="text"],
 input[type="email"],
 textarea {
-  display: block;
-  width: 100%;
   padding: 15px;
   border: 1px solid rgba(0, 0, 0, 0.4);
   border-radius: 5px;
-  margin: 5px 0;
   outline: none;
   background-color: var(--secondary);
   color: var(--text);

@@ -36,17 +36,17 @@ export const ContactForm = () => {
     }
 
     return (
-        <article className="container" id="container-contact">
+        <article className="container" id="container-contact-form">
             {
                 (emailStatus && show) && (
                     <ToastNotification status={emailStatus} />
                 )
             }
             <form ref={form} className="container-small" onSubmit={e => sendMail(e)}>
-                <input type="text" placeholder={texts.formName} name="from_name" required />
-                <input type="email" placeholder={texts.formEmail} name="from_email" required />
-                <textarea placeholder={texts.formMessage} name="message" required></textarea>
-                <input className="button-primary" type="submit" value={texts.formPrimaryButton} />
+                <input type="text" placeholder={texts.formName} name="from_name" id="name_input" required />
+                <input type="email" placeholder={texts.formEmail} name="from_email" id="email_input" required />
+                <textarea placeholder={texts.formMessage} name="message" id="message_input" required></textarea>
+                <input className="button-primary" type="submit" id="submit_input" value={texts.formPrimaryButton} />
             </form>
         </article>
     )

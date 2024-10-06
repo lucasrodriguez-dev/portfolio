@@ -7,7 +7,7 @@ export const myServices = [
         },
         description: {
             en: "If you are looking for someone capable of designing a static or dynamic website, you have found the right person!",
-            es: "Si estás buscando alguien capaz de diseñar una web estática o dinámica, has encontrado a la persona indicada!"
+            es: "Si estás buscando alguien capaz de diseñar una web estática o dinámica, ¡has encontrado a la persona indicada!"
         },
         technologies: ["html5", "css3", "javascript", "jquery", "react"],
         icon: "frontend"
@@ -28,8 +28,8 @@ export const myServices = [
     {
         id: 2,
         name: {
-            en: "Database Administration",
-            es: "Administración de Bases de Datos"
+            en: "Database",
+            es: "Bases de Datos"
         },
         description: {
             en: "From initial setup to continuous monitoring and troubleshooting, I ensure your data is always available and protected.",

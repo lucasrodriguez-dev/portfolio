@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import ThemeSwitcher from '../mycomponents/ThemeSwitcher';
 import LanguageSwitcher from '../mycomponents/LanguageSwitcher';
 import { LanguageContext } from '../../contexts/LanguageContext';
+import { Link } from 'react-scroll';
 
 export const Header = () => {
     const { texts } = useContext(LanguageContext);
@@ -18,13 +19,13 @@ export const Header = () => {
                         <NavLink to="/">{texts.navHome}</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/services">{texts.navServices}</NavLink>
+                        <Link to="projects" smooth={true}>{texts.navProjects}</Link>
                     </li>
                     <li>
-                        <NavLink to="/projects">{texts.navProjects}</NavLink>
+                        <Link to="services" smooth={true}>{texts.navServices}</Link>
                     </li>
                     <li>
-                        <NavLink to="/contact">{texts.navContact}</NavLink>
+                        <Link to="contact" smooth={true}>{texts.navContact}</Link>
                     </li>
                     <li>
                         <ThemeSwitcher />

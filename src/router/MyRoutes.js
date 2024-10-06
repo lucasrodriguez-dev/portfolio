@@ -16,9 +16,6 @@ export const MyRoutes = () => {
             <section className="content">
                 <Routes>
                     <Route path="/" element={<HomePage />} />
-                    <Route path="/projects" element={<PortfolioPage />} />
-                    <Route path="/contact" element={<ContactPage />} />
-                    <Route path="/services" element={<ServicesPage />} />
                     <Route path="/project/:id" element={<ProjectPage />} />
                     <Route path="*" element={<NotFoundPage />} />
                 </Routes>

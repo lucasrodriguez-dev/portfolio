@@ -17,23 +17,27 @@ export const ThemeProvider = ({ children }) => {
     const lightTheme = {
       "--background": "#F2FAF5",
       "--primary": "#3F72AF",
-      "--secondary": "#9fadc4",
+      "--secondary": "#acd1fc",
       "--accent": "#112D4E",
       "--text": "#060E09",
       "--text-primary": "#eee",
       "--text-secondary": "#000",
-      "--text-box-background": "#ddd"
+      "--text-box-background": "#cad5e3",
+      "--project-background": "var(--gradient-secondary)",
+      "--service-background": "var(--secondary)"
     };
 
     const darkTheme = {
       "--background": "#232222",
       "--primary": "#700000",
-      "--secondary": "#444444",
+      "--secondary": "#200000",
       "--accent": "#e22c7b",
       "--text": "#e0e0e0",
       "--text-primary": "",
       "--text-secondary": "#ccc",
-      "--text-box-background": "var(--secondary)"
+      "--text-box-background": "#2b2323",
+      "--project-background": "var(--secondary)",
+      "--service-background": "var(--gradient-secondary)"
     };
 
     const themeVariables = theme === "light" ? lightTheme : darkTheme;
