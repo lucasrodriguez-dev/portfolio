@@ -16,22 +16,24 @@ export const ThemeProvider = ({ children }) => {
 
     const lightTheme = {
       "--background": "#F2FAF5",
-      "--primary": "#55B67E",
-      "--secondary": "hsl(217, 40%, 70%, 30%)",
-      "--secondary-withMoreOpacity": "hsl(217, 40%, 70%, 30%)",
-      "--accent": "#7073C2",
+      "--primary": "#3F72AF",
+      "--secondary": "#9fadc4",
+      "--accent": "#112D4E",
       "--text": "#060E09",
-      "--gradient-main": "linear-gradient(120deg, var(--primary-light), var(--accent-light))",
+      "--text-primary": "#eee",
+      "--text-secondary": "#000",
+      "--text-box-background": "#ddd"
     };
 
     const darkTheme = {
-        "--background": "#232222",
-        "--primary": "#700000",
-        "--secondary": "hsl(0, 0%, 0%, 30%)",
-        "--secondary-withMoreOpacity": "hsl(0, 0%, 0%, 50%)",
-        "--accent": "#e22c7b",
-        "--text": "#e0e0e0",
-        "--gradient-main": "linear-gradient(120deg, var(--primary-dark), var(--accent-dark))"
+      "--background": "#232222",
+      "--primary": "#700000",
+      "--secondary": "#444444",
+      "--accent": "#e22c7b",
+      "--text": "#e0e0e0",
+      "--text-primary": "",
+      "--text-secondary": "#ccc",
+      "--text-box-background": "var(--secondary)"
     };
 
     const themeVariables = theme === "light" ? lightTheme : darkTheme;

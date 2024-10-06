@@ -17,27 +17,26 @@ export const HomePage = () => {
     <section>
       <article className="container-main">
         <article className="container" id="container-presentation">
-          <div className="flex flex-row" id="container-p-me">
-            <p id="p-presentation">
-              {paragraphs[0]}.
-              <br />
-              {paragraphs[1]}.
-              <br />
-              {paragraphs[2]}.
-              <br /><br />
-              <div>
-                <Icons />
-              </div>
-            </p>
-            <article id="container-me">
-              <div className="blob">
-                <img className="image" src={"/images/me.png"} id="image-me" />
-              </div>
-            </article>
+          <div id="p-presentation">
+            {paragraphs[0]}.
+            <br />
+            {paragraphs[1]}.
+            <br />
+            {paragraphs[2]}.
+            <br /><br />
+            <div>
+              <Icons />
+            </div>
           </div>
-          <h3 className="subheading">{texts.homeProjects}</h3>
-          <ProjectList limit={3} />
-          <Link to="/projects" className="button-primary">{texts.homePrimaryButton}</Link>
+          <div id="container-me">
+            <div className="blob">
+              <img className="image" src={"/images/me.png"} id="image-me" />
+            </div>
+          </div>
+        </article>
+        <article id="container-portfolio">
+          <h3 className="heading">{texts.navProjects}</h3>
+          <ProjectList />
         </article>
       </article>
     </section>

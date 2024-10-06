@@ -1,5 +1,4 @@
 import React, { useContext, useRef, useState } from 'react';
-import emailjs from '@emailjs/browser';
 import { ToastNotification } from './ToastNotification';
 import { LanguageContext } from '../../contexts/LanguageContext';
 
@@ -13,17 +12,19 @@ export const ContactForm = () => {
 
     const sendMail = (e) => {
         e.preventDefault();
-        emailjs
-            .sendForm('service_sl13b3x', 'template_73d5s5e', form.current, {
-                publicKey: 'Xkr_dCqh9bjqiNGDw',
-            })
-            .then(() => { 
-                showNotification(200);
-            })
-            .catch((error) => { 
-                console.log(error);
-                showNotification(404);
-            })
+        window.Email.send({
+            SecureToken: "6c9491f2-839e-4f47-8de4-18ca0ae1962d",
+            Host: "smtp.elasticemail.com",
+            Username: "lucascsrodriguez@gmail.com",
+            Password: "266D18BD3A223F3E458DB0CAA3E654A79AD7",
+            To: "lucasrodriguezdepena@gmail.com",
+            From: "lucasrodriguezdepena@gmail.com",
+            Subject: "Portfolio - Nuevo mensaje",
+            Body: `Nombre: ${form.current["from_name"].value} <br> Mensaje: ${form.current["message"].value}`,
+        }).then(
+            message => alert(message)
+            //showNotification(200)
+        ).catch(error => console.log(error) /*showNotification(404)*/)
     }
 
     const showNotification = (status) => {
